@@ -1,4 +1,4 @@
-const theme = require('./src/theme');
+const theme = require('./src/styles/theme');
 
 module.exports = {
   siteMetadata: {
