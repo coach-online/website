@@ -2,6 +2,7 @@ const theme = {
   fontFamily: 'Almarai',
   colors: {
     black: '#3a3a3a',
+    black2: '#333333',
     gray: '#f7f9fe', // section background
     blue: '#138afd',
     pink: '#f6716f',
