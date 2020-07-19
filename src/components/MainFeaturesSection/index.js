@@ -10,7 +10,7 @@ export default function MainFeaturesSection() {
         <div className={classes.wrapper}>
           <div className={classes.topWrapper}>
             <div className={classes.topInner}>
-              <h3 className={classes.mainTitle}> تواصل مع المشتركين بكل سهولة</h3>
+              <h2 className={classes.mainTitle}> تواصل مع المشتركين بكل سهولة</h2>
             </div>
             <div className={classes.topInner}>
               <p className={classes.topParagraph}>
@@ -52,7 +52,7 @@ export default function MainFeaturesSection() {
                 alt="mobile-2"
               />
               <div>
-                <h2 className={classes.imageTitle}>أمكو أليكيوب أكس أيا</h2>
+                <h3 className={classes.imageTitle}>أمكو أليكيوب أكس أيا</h3>
                 <p className={classes.imageDescription}>
                   لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
                   أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
@@ -77,7 +77,7 @@ export default function MainFeaturesSection() {
                 alt="mobile-2"
               />
               <div>
-                <h2 className={classes.imageTitle}>أمكو أليكيوب أكس أيا 1</h2>
+                <h3 className={classes.imageTitle}>أمكو أليكيوب أكس أيا 1</h3>
                 <p className={classes.imageDescription}>
                   لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
                   أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد

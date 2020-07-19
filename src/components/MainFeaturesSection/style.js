@@ -114,11 +114,19 @@ const useStyles = createUseStyles((theme) => ({
   },
   imageTitle: {
     color: theme.colors.black2,
-    fontSize: 'calc(45px + (48 - 40) * (100vw - 400px) / (1200 - 400))',
+    fontSize: '45px',
     fontWeight: 700,
     lineHeight: '150%',
     marginBottom: 30,
     marginTop: '50px',
+    [`@media (max-width: ${theme.breakpoints.laptop})`]: {
+      maxWidth: 350,
+    },
+
+    [`@media (max-width: ${theme.breakpoints.tablet})`]: {
+      fontSize: 'calc(40px + (45 - 40) * (100vw - 600px) / (1200 - 600))',
+    },
+
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       marginTop: '50px',
     },
