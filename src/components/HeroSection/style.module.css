@@ -1,0 +1,47 @@
+.hero {
+  padding-top: 183px;
+}
+
+.heroSec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroContent {
+  width: 530px;
+  font: normal normal bold 35px/94px Cairo;
+  letter-spacing: 0px;
+  color: #000000;
+  padding-top: 60px;
+}
+
+.heroContent h2 {
+  font-weight: 700;
+}
+
+.heroContent button {
+  width: 195px;
+  height: 60px;
+  border: none;
+  background: var(--primary-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 20px 40px #1421ff4d;
+  border-radius: 8px;
+  color: #fff;
+  text-align: right;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 60px;
+  margin-bottom: 170px;
+}
+
+.heroContent button > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroContent button > span:after {
+  content: " \2190";
+  font-size: 30px;
+}

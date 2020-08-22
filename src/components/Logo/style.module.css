@@ -1,0 +1,13 @@
+.onlineCoachLogo {
+  display: flex;
+  align-items: center;
+}
+
+.onlineCoachLogo img {
+  height: 28px;
+  width: 70px;
+}
+
+.onlineCoachLogo h1 {
+  display: none;
+}

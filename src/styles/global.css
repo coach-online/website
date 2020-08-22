@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
 
 pre {
-  font-family: 'canada-type-gibson';
+  font-family: "canada-type-gibson";
   font-size: 1em;
 }
 
 code,
 kbd,
 samp {
-  font-family: 'canada-type-gibson';
+  font-family: "canada-type-gibson";
   font-size: 1em;
 }
 
@@ -19,25 +19,25 @@ small {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Almarai', sans-serif;
+  font-family: "Almarai", sans-serif;
   overflow-x: hidden;
   text-align: right;
   direction: rtl;
 }
 
-::-moz-selection { 
+::-moz-selection {
   background: #333333;
   color: #ffffff;
 }
 
-::selection { 
+::selection {
   background: #333333;
   color: #ffffff;
 }
-
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 html {
@@ -51,4 +51,108 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+/* Global Variables */
+:root {
+  /* Colors */
+  --black-base-color: #000000;
+  --black-color: #161616;
+  --white-color: #ffffff;
+  --primary-dark-color: #332c6b;
+  --primary-color: #714efb;
+  --dark-gray1: #555555;
+  --dark-gray2: #4d4d4d;
+  --light-gray: #f6f6f6;
+
+  /* Font/text values */
+  --global-font-family: Cairo;
+  --font-weight-bold: bold;
+  --font-weight-normal: normal;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-35: 35px;
+  --font-size-45: 45px;
+  --font-size-56: 56px;
+  --character-spacing-0: 0px;
+  --line-spacing-27: 27px;
+  --line-spacing-37: 37px;
+  --line-spacing-45: 45px;
+  --line-spacing-60: 60px;
+  --line-spacing-65: 65px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-tablet: 767px;
+  --breakpoint-mobile: 600px;
+}
+
+/* Character Styles */
+.font-style-1 {
+  font-size: var(--font-size-20);
+  line-height: var(--line-spacing-37);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+.font-style-2 {
+  font-size: var(--font-size-24);
+  line-height: var(--line-spacing-65);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+.font-style-3 {
+  font-size: var(--font-size-35);
+  line-height: var(--line-spacing-45);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--back-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+.font-style-4 {
+  font-size: var(--font-size-45);
+  line-height: var(--line-spacing-60);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--back-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+.font-style-5 {
+  font-size: var(--font-size-56);
+  line-height: var(--line-spacing-65);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+}
+.font-style-6 {
+  font-size: var(--font-size-18);
+  line-height: var(--line-spacing-27);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+  font-family: var(--global-font-family);
+}
+
+body {
+  font-family: var(--global-font-family);
+  font-style: var(--font-style-normal);
+  font-size: var(--font-size-18);
+}
+
+/* Reusable classes */
+
+.list-non-styled {
+  list-style: none;
+}
+
+.img-container {
+  height: 100%;
+}
+
+.padding-top-100 {
+  padding-top: 100px;
+}
+
+.center{
+  text-align: center;
 }
