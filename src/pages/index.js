@@ -1,29 +1,18 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
 
-import Header from '../components/Header';
 import SEO from '../components/seo';
 import HeroSection from '../components/HeroSection';
-import MainFeaturesSection from '../components/MainFeaturesSection';
+import Features from '../components/Features';
+import SubscribeForm from '../components/SubscribeForm';
+import Layout1 from '../components/Layouts/Layout1';
 
-const useStyles = createUseStyles((theme) => ({
-  paragraph: {
-    color: theme.colors.blue,
-  },
-}));
-
-const IndexPage = () => {
-  const classes = useStyles();
-
-  return (
-    <>
-      <Header />
-      <SEO title="Home" />
-      <HeroSection />
-      <MainFeaturesSection />
-      <p className={classes.paragraph}>test</p>
-    </>
-  );
-};
+const IndexPage = () => (
+  <Layout1>
+    <SEO title="Home" />
+    <HeroSection />
+    <Features />
+    <SubscribeForm />
+  </Layout1>
+);
 
 export default IndexPage;
