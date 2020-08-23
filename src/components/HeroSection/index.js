@@ -1,11 +1,23 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Container from '../Container';
-import HeroImg from '../../images/Group 581.png';
 
 import heroStyles from './style.module.css';
 
 export default function HeroSection() {
+  const data = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "Group 581@2x.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
   return (
     <section id="/" className={heroStyles.hero}>
       <Container>
@@ -16,8 +28,11 @@ export default function HeroSection() {
               <span>إكتشف</span>
             </button>
           </div>
-          <div>
-            <img src={HeroImg} alt="online coach hero" />
+          <div className={heroStyles.imgContainer}>
+            <Img
+              fluid={data.image.childImageSharp.fluid}
+              alt="online coach hero"
+            />
           </div>
         </div>
       </Container>

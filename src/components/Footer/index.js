@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Logo from '../Logo';
-
 import fb from '../../images/ico - 24 - social media & tools - facebook.png';
 import instagram from '../../images/ico - 24 - social media & tools - instagram.png';
 import linkedIn from '../../images/ico - 24 - social media & tools - linkedin.png';

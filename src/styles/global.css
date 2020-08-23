@@ -84,6 +84,11 @@ html {
   --breakpoint-laptop: 1024px;
   --breakpoint-tablet: 767px;
   --breakpoint-mobile: 600px;
+
+  /* breakpoints */
+  --breakpoint-laptop: 1024px;
+  --breakpoint-tablet: 767px;
+  --breakpoint-mobile: 600px;
 }
 
 /* Character Styles */
@@ -107,7 +112,7 @@ html {
   font-size: var(--font-size-35);
   line-height: var(--line-spacing-45);
   letter-spacing: var(--character-spacing-0);
-  color: var(--back-color);
+  color: var(--black-color);
   font-family: var(--global-font-family);
   font-weight: bold;
 }
@@ -115,7 +120,7 @@ html {
   font-size: var(--font-size-45);
   line-height: var(--line-spacing-60);
   letter-spacing: var(--character-spacing-0);
-  color: var(--back-color);
+  color: var(--black-color);
   font-family: var(--global-font-family);
   font-weight: bold;
 }
@@ -153,6 +158,16 @@ body {
   padding-top: 100px;
 }
 
-.center{
+.center {
   text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --font-size-20: 18px;
+    --font-size-24: 21px;
+    --font-size-35: 32px;
+    --font-size-45: 43px;
+    --font-size-56: 52px;
+  }
 }

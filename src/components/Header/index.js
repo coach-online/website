@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Container from '../Container';
 import ListLink from '../ListLink';
-
 import Logo from '../Logo';
 
 import headerStyles from './style.module.css';
 
 function Header() {
+  const [isToggled, setToggle] = useState(false);
+
+  const toggleMenu = () => {
+    setToggle(!isToggled);
+  };
   return (
     <header className={headerStyles.header}>
       <Container>
@@ -20,6 +24,30 @@ function Header() {
               <ListLink to="/#subscribe">اشترك مجانا</ListLink>
             </ul>
           </div>
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className={headerStyles.mbNavBurgar}
+          >
+            <div className={headerStyles.mbNavToggle}>
+              <span
+                className={
+                  isToggled
+                    ? `${headerStyles.rotateRight} ${headerStyles.rotateLeft}`
+                    : ''
+                }
+              />
+            </div>
+          </button>
+          {isToggled && (
+            <div className={headerStyles.mbMenu}>
+              <ul className={headerStyles.mbList}>
+                <ListLink className={headerStyles.mbItem} to="/"> الرئيسية</ListLink>
+                <ListLink className={headerStyles.mbItem} to="/#features">مزايانا</ListLink>
+                <ListLink className={headerStyles.mbItem} to="/#subscribe">اشترك مجانا</ListLink>
+              </ul>
+            </div>
+          )}
         </nav>
       </Container>
     </header>
