@@ -3,12 +3,14 @@ import { Link } from 'gatsby';
 
 import listStyles from './style.module.css';
 
-export default ({ to, children, className }) => {
+export default ({
+  to, children, className, toggleMenu,
+}) => {
   const isActive = ({ location }) => (location.pathname + location.hash === to
     ? { className: listStyles.active }
     : {});
   return (
-    <li className={className}>
+    <li onClick={toggleMenu} className={className}>
       <Link getProps={isActive} to={to} className={listStyles.link}>
         {children}
       </Link>

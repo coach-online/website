@@ -42,9 +42,27 @@ function Header() {
           {isToggled && (
             <div className={headerStyles.mbMenu}>
               <ul className={headerStyles.mbList}>
-                <ListLink className={headerStyles.mbItem} to="/"> الرئيسية</ListLink>
-                <ListLink className={headerStyles.mbItem} to="/#features">مزايانا</ListLink>
-                <ListLink className={headerStyles.mbItem} to="/#subscribe">اشترك مجانا</ListLink>
+                <ListLink
+                  toggleMenu={toggleMenu}
+                  className={headerStyles.mbItem}
+                  to="/"
+                >
+                  الرئيسية
+                </ListLink>
+                <ListLink
+                  toggleMenu={toggleMenu}
+                  className={headerStyles.mbItem}
+                  to="/#features"
+                >
+                  مزايانا
+                </ListLink>
+                <ListLink
+                  toggleMenu={toggleMenu}
+                  className={headerStyles.mbItem}
+                  to="/#subscribe"
+                >
+                  اشترك مجانا
+                </ListLink>
               </ul>
             </div>
           )}
