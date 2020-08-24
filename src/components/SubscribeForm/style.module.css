@@ -7,6 +7,7 @@
 .bgLayer {
   background: var(--primary-dark-color) 0% 0% no-repeat padding-box;
   border-radius: 20px;
+  padding: 7px;
 }
 
 .subscribeContainer {
@@ -67,8 +68,13 @@
     margin-right: 0;
   }
 
-  .subscribeForm{
+  .subscribeForm {
     padding: 0 50px;
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .subscribeForm {
+    padding: 0 10px;
+  }
+}

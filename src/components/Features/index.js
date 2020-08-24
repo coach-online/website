@@ -3,8 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Container from '../Container';
 import Feature from '../Feature';
+import { Heading2 } from '../Typography';
 
-import featuresStyles from './style.module.css';
+import style from './style.module.css';
 
 export default function MainFeaturesSection() {
   const data = useStaticQuery(graphql`
@@ -30,9 +31,9 @@ export default function MainFeaturesSection() {
     : null);
   return (
     <>
-      <section id="features" className={featuresStyles.features}>
+      <section id="features" className={style.features}>
         <Container>
-          <h2 className="font-style-4 center">مزايا كوتش أونلاين</h2>
+          <Heading2 className="center">مزايا كوتش أونلاين</Heading2>
           <Feature
             src={getFeatureImgSrc('feature1')}
             alt="feature 1"
@@ -40,7 +41,7 @@ export default function MainFeaturesSection() {
             h3="توفير الوقت والجهد"
           />
           <Feature
-            order="-1"
+            order={-1}
             src={getFeatureImgSrc('feature2')}
             alt="feature 2"
             p=" كوتش اونلاين يتيح لك مجموعة كبيرة من جداول التمرين والتغذية المعتمدة ويمكنك ايضا التعديل عليها وتخصيصها للمشترك الجديد"
@@ -53,7 +54,7 @@ export default function MainFeaturesSection() {
             h3="بناء جداول التغذية"
           />
           <Feature
-            order="-1"
+            order={-1}
             src={getFeatureImgSrc('feature4')}
             alt="feature 2"
             p=" كوتش اونلاين يوفر لك مكتبة فيديو ضخمة من التمارين مع شرح طريقة اداء كل تمارين يمكنك استخدامها في بناء جداول المشتركين"

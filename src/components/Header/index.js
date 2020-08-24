@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from '@reach/router';
 
 import Container from '../Container';
 import ListLink from '../ListLink';
 import Logo from '../Logo';
 
-import headerStyles from './style.module.css';
+import style from './style.module.css';
 
 function Header() {
   const [isToggled, setToggle] = useState(false);
 
   const toggleMenu = () => {
-    setToggle(!isToggled);
+    setToggle((prev) => !prev);
   };
+
   return (
-    <header className={headerStyles.header}>
+    <header className={style.header}>
       <Container>
-        <nav className={headerStyles.nav}>
+        <nav className={style.nav}>
           <Logo />
-          <div className={headerStyles.navList}>
+          <div className={style.navList}>
             <ul className="list-non-styled">
               <ListLink to="/"> الرئيسية</ListLink>
               <ListLink to="/#features">مزايانا</ListLink>
@@ -27,38 +29,36 @@ function Header() {
           <button
             type="button"
             onClick={toggleMenu}
-            className={headerStyles.mbNavBurgar}
+            className={style.mbNavBurgar}
           >
-            <div className={headerStyles.mbNavToggle}>
+            <div className={style.mbNavToggle}>
               <span
                 className={
-                  isToggled
-                    ? `${headerStyles.rotateRight} ${headerStyles.rotateLeft}`
-                    : ''
+                  isToggled ? `${style.rotateRight} ${style.rotateLeft}` : ''
                 }
               />
             </div>
           </button>
           {isToggled && (
-            <div className={headerStyles.mbMenu}>
-              <ul className={headerStyles.mbList}>
+            <div className={style.mbMenu}>
+              <ul className={style.mbList}>
                 <ListLink
                   toggleMenu={toggleMenu}
-                  className={headerStyles.mbItem}
+                  className={style.mbItem}
                   to="/"
                 >
                   الرئيسية
                 </ListLink>
                 <ListLink
                   toggleMenu={toggleMenu}
-                  className={headerStyles.mbItem}
+                  className={style.mbItem}
                   to="/#features"
                 >
                   مزايانا
                 </ListLink>
                 <ListLink
                   toggleMenu={toggleMenu}
-                  className={headerStyles.mbItem}
+                  className={style.mbItem}
                   to="/#subscribe"
                 >
                   اشترك مجانا

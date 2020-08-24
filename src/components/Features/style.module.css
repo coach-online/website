@@ -9,6 +9,10 @@
 /* Tablet */
 @media only screen and (max-width: 768px) {
   .features h2 {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+  }
+
+  .features{
+    padding-top: 25px;
   }
 }

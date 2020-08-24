@@ -63,11 +63,11 @@
 }
 
 .mbNavToggle span::before {
-  top: -0.8rem;
+  top: -0.6rem;
 }
 
 .mbNavToggle span::after {
-  top: 0.8rem;
+  top: 0.6rem;
 }
 
 .mbNavToggle span.rotateLeft {
@@ -85,7 +85,7 @@
 }
 
 .mbMenu {
-  height: calc(100vh - 105px);
+  height: calc(100vh - 60px);
   position: absolute;
   top: 100%;
   left: 0;
@@ -129,5 +129,9 @@
 
   .navList {
     display: none;
+  }
+
+  .nav{
+    height: 60px;
   }
 }

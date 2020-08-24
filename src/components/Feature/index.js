@@ -1,19 +1,32 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
 
-import featureStyles from './style.module.css';
+import ImgContainer from '../ImgContainer';
+import { Heading3 } from '../Typography';
 
-export default ({
+import style from './style.module.css';
+
+export default function Feature({
   src, p, h3, alt, order,
-}) => (
-  <div className={featureStyles.feature}>
-    <div className={featureStyles.featureContent}>
-      <h3 className="font-style-3">{h3}</h3>
-      <p className="font-style-6">{p}</p>
+}) {
+  return (
+    <div className={style.feature}>
+      <div className={style.featureContent}>
+        <Heading3>{h3}</Heading3>
+        <p className="font-style-6">{p}</p>
+      </div>
+      <ImgContainer fluid={src} alt={alt} order={order} />
     </div>
-    <div className={featureStyles.imgContainer} style={{ order }}>
-      <Img fluid={src} alt={alt} />
-      {' '}
-    </div>
-  </div>
-);
+  );
+}
+
+Feature.defaultProps = {
+  order: '',
+};
+Feature.propTypes = {
+  src: PropTypes.objectOf(PropTypes.any).isRequired,
+  p: PropTypes.string.isRequired,
+  h3: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  order: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+};

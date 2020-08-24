@@ -91,61 +91,16 @@ html {
   --breakpoint-mobile: 600px;
 }
 
-/* Character Styles */
-.font-style-1 {
-  font-size: var(--font-size-20);
-  line-height: var(--line-spacing-37);
-  letter-spacing: var(--character-spacing-0);
-  color: var(--black-base-color);
-  font-family: var(--global-font-family);
-  font-weight: bold;
-}
-.font-style-2 {
-  font-size: var(--font-size-24);
-  line-height: var(--line-spacing-65);
-  letter-spacing: var(--character-spacing-0);
-  color: var(--black-base-color);
-  font-family: var(--global-font-family);
-  font-weight: bold;
-}
-.font-style-3 {
-  font-size: var(--font-size-35);
-  line-height: var(--line-spacing-45);
-  letter-spacing: var(--character-spacing-0);
-  color: var(--black-color);
-  font-family: var(--global-font-family);
-  font-weight: bold;
-}
-.font-style-4 {
-  font-size: var(--font-size-45);
-  line-height: var(--line-spacing-60);
-  letter-spacing: var(--character-spacing-0);
-  color: var(--black-color);
-  font-family: var(--global-font-family);
-  font-weight: bold;
-}
-.font-style-5 {
-  font-size: var(--font-size-56);
-  line-height: var(--line-spacing-65);
-  letter-spacing: var(--character-spacing-0);
-  color: var(--black-base-color);
-}
-.font-style-6 {
-  font-size: var(--font-size-18);
-  line-height: var(--line-spacing-27);
-  letter-spacing: var(--character-spacing-0);
-  color: var(--black-base-color);
-  font-family: var(--global-font-family);
-}
-
 body {
   font-family: var(--global-font-family);
   font-style: var(--font-style-normal);
   font-size: var(--font-size-18);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+  line-height: var(--line-spacing-27);
 }
 
 /* Reusable classes */
-
 .list-non-styled {
   list-style: none;
 }
@@ -169,5 +124,16 @@ body {
     --font-size-35: 32px;
     --font-size-45: 43px;
     --font-size-56: 52px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-size-20: 18px;
+    --font-size-24: 20px;
+    --font-size-35: 25px;
+    --font-size-45: 30px;
+    --font-size-56: 40px;
+    --font-size-18: 16px;
   }
 }

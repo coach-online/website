@@ -2,26 +2,28 @@ import React from 'react';
 
 import Container from '../Container';
 
-import subscribeStyles from './style.module.css';
+import style from './style.module.css';
+import { Heading2, P24 } from '../Typography';
 
 export default () => (
-  <section id="subscribe" className={subscribeStyles.subscribe}>
-    <Container className={subscribeStyles.subscribeContainer}>
-      <div className={subscribeStyles.bgLayer}>
-        <h2 className="font-style-5">إنضم إلينا</h2>
-        <p className="font-style-2">
+  <section id="subscribe" className={style.subscribe}>
+    <Container className={style.subscribeContainer}>
+      <div className={style.bgLayer}>
+        <Heading2 fontSize="56px">إنضم إلينا</Heading2>
+        <P24>
           اترك لنا بريدك الالكتروني لنقوم بارسال لك نسخة من التطبيق قبل الجميع
-        </p>
-        <form className={subscribeStyles.subscribeForm}>
-          <label htmlFor="email" />
-          <input
-            className={subscribeStyles.subscribeInput}
-            placeholder="البريد الالكتروني"
-            id="email"
-            name="email"
-            type="email"
-          />
-          <button className={subscribeStyles.subscribeBtn} type="submit">
+        </P24>
+        <form className={style.subscribeForm}>
+          <label htmlFor="email">
+            <input
+              className={style.subscribeInput}
+              placeholder="البريد الالكتروني"
+              id="email"
+              name="email"
+              type="email"
+            />
+          </label>
+          <button className={style.subscribeBtn} type="submit">
             تسجيل
           </button>
         </form>

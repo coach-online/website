@@ -1,10 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import Container from '../Container';
+import ImgContainer from '../ImgContainer';
+import { P20 } from '../Typography';
 
-import heroStyles from './style.module.css';
+import style from './style.module.css';
 
 export default function HeroSection() {
   const data = useStaticQuery(graphql`
@@ -19,21 +20,23 @@ export default function HeroSection() {
     }
   `);
   return (
-    <section id="/" className={heroStyles.hero}>
+    <section id="/" className={style.hero}>
       <Container>
-        <div className={heroStyles.heroSec}>
-          <div className={heroStyles.heroContent}>
-            <h2>نص ترحيبي يهدف الى شريح التطبيق بشكل مختصر جدا</h2>
-            <button type="button" className="font-style-1">
-              <span>إكتشف</span>
+        <div className={style.heroSec}>
+          <div className={style.heroContent}>
+            <h2 className={style.heading2}>
+              نص ترحيبي يهدف الى شريح التطبيق بشكل مختصر جدا
+            </h2>
+            <button type="button">
+              <P20 className={style.buttonText}>
+                <span>إكتشف</span>
+              </P20>
             </button>
           </div>
-          <div className={heroStyles.imgContainer}>
-            <Img
-              fluid={data.image.childImageSharp.fluid}
-              alt="online coach hero"
-            />
-          </div>
+          <ImgContainer
+            fluid={data.image.childImageSharp.fluid}
+            alt="online coach hero"
+          />
         </div>
       </Container>
     </section>

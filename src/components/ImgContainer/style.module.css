@@ -1,0 +1,10 @@
+.imgContainer {
+  width: 445px;
+}
+
+@media only screen and (max-width: 600px) {
+  .imgContainer {
+    order: -1;
+    width: 150px;
+  }
+}

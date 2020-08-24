@@ -17,12 +17,6 @@
   margin-top: 24px;
 }
 
-.imgContainer {
-  max-width: 600px;
-  width: 450px;
-  min-width: 300px;
-}
-
 /* Mobile */
 @media only screen and (max-width: 600px) {
   .feature {
@@ -31,13 +25,8 @@
     justify-content: center;
   }
 
-  .featureContent{
+  .featureContent {
     text-align: center;
     margin-top: 50px;
-  }
-
-  .feature .imgContainer {
-    order: -1;
-    width: 250px;
   }
 }

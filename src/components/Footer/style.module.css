@@ -50,6 +50,10 @@
   .links {
     flex-direction: column;
   }
+  .cprights p {
+    text-align: center;
+    padding-bottom: 50px;
+  }
 }
 
 /* Mobile */
@@ -61,11 +65,6 @@
   .footer ul {
     align-items: center;
     gap: 20px;
-  }
-
-  .cprights p {
-    text-align: center;
-    padding-bottom: 50px;
   }
 
   .links {

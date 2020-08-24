@@ -1,19 +1,34 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
-import listStyles from './style.module.css';
+import style from './style.module.css';
 
-export default ({
+export default function LinkItem({
   to, children, className, toggleMenu,
-}) => {
-  const isActive = ({ location }) => (location.pathname + location.hash === to
-    ? { className: listStyles.active }
-    : {});
+}) {
+  const isActive = ({ location }) => (location.pathname + location.hash === to ? { className: style.active } : {});
   return (
-    <li onClick={toggleMenu} className={className}>
-      <Link getProps={isActive} to={to} className={listStyles.link}>
+    <li className={className}>
+      <Link
+        onClick={toggleMenu}
+        getProps={isActive}
+        to={to}
+        className={style.link}
+      >
         {children}
       </Link>
     </li>
   );
+}
+LinkItem.defaultProps = {
+  className: '',
+  toggleMenu: null,
+};
+LinkItem.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
+    .isRequired,
+  className: PropTypes.string,
+  toggleMenu: PropTypes.func,
 };
