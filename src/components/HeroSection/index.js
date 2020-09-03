@@ -10,7 +10,7 @@ import style from './style.module.css';
 export default function HeroSection() {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "Group 581@2x.png" }) {
+      image: file(relativePath: { eq: "0.png" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
