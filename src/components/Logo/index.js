@@ -8,8 +8,8 @@ import style from './style.module.css';
 export default () => (
   <Link to="/">
     <div className={style.onlineCoachLogo}>
-      <img src={logoSrc} alt="online-coach logo" />
-      <h1>Online Coach</h1>
+      <img src={logoSrc} alt="yallaCoach logo" />
+      <h1>YallaCoach</h1>
     </div>
   </Link>
 );
