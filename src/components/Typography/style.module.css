@@ -1,0 +1,46 @@
+/* Character Styles */
+.p20 {
+  font-size: var(--font-size-20);
+  line-height: var(--line-spacing-37);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+
+.p24,
+.h4 {
+  font-size: var(--font-size-24);
+  line-height: var(--line-spacing-65);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+
+.h3 {
+  font-size: var(--font-size-35);
+  line-height: var(--line-spacing-45);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+
+.h2 {
+  font-size: var(--font-size-45);
+  line-height: var(--line-spacing-60);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: var(--font-size-56);
+  line-height: var(--line-spacing-65);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--black-base-color);
+  font-family: var(--global-font-family);
+  font-weight: bold;
+}
