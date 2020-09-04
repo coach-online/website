@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - 20-set-up-automatic-deploy
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
