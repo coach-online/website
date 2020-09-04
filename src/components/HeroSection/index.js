@@ -25,8 +25,11 @@ export default function HeroSection() {
         <div className={style.heroSec}>
           <div className={style.heroContent}>
             <h2 className={style.heading2}>
-              إنشاء جداول التمارين والتغذية للمشتركين بطريقة فعالة وموفرة للوقت
+              just to test github actions :D
             </h2>
+            {/* <h2 className={style.heading2}>
+              إنشاء جداول التمارين والتغذية للمشتركين بطريقة فعالة وموفرة للوقت
+            </h2> */}
             <button type="button">
               <P20 className={style.buttonText}>
                 <span>إكتشف</span>
