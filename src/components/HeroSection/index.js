@@ -10,7 +10,7 @@ import style from './style.module.css';
 export default function HeroSection() {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "Group 581@2x.png" }) {
+      image: file(relativePath: { eq: "0.png" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div className={style.heroSec}>
           <div className={style.heroContent}>
             <h2 className={style.heading2}>
-              نص ترحيبي يهدف الى شريح التطبيق بشكل مختصر جدا
+              إنشاء جداول التمارين والتغذية للمشتركين بطريقة فعالة وموفرة للوقت
             </h2>
             <button type="button">
               <P20 className={style.buttonText}>
@@ -35,7 +35,7 @@ export default function HeroSection() {
           </div>
           <ImgContainer
             fluid={data.image.childImageSharp.fluid}
-            alt="online coach hero"
+            alt="YallaCoach hero"
           />
         </div>
       </Container>
