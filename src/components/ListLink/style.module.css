@@ -10,3 +10,7 @@
   color: var(--black-base-color);
   text-decoration: none;
 }
+
+a {
+  transition: all 0.5 ease-in;
+}

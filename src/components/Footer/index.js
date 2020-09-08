@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
 
 import Logo from '../Logo';
 import fb from '../../images/ico - 24 - social media & tools - facebook.png';
@@ -17,20 +18,30 @@ export default () => (
       <div className={style.links}>
         <Logo />
         <ul className="list-non-styled">
-          <ListLink to="/">الرئيسية</ListLink>
-          <ListLink to="/terms">سياسة الإستخدام</ListLink>
-          <ListLink to="/policy">سياسة الخصوصية</ListLink>
-          <ListLink to="/map">خارطة الموقع</ListLink>
+          <ListLink to="/">
+            <Trans i18nKey="nav.home">الصفحة الرئيسية</Trans>
+          </ListLink>
+          <ListLink to="/terms">
+            <Trans i18nKey="nav.terms"> سياسة الإستخدام</Trans>
+          </ListLink>
+          <ListLink to="/policy">
+            <Trans i18nKey="nav.privacyPolicy">سياسة الخصوصية</Trans>
+          </ListLink>
+          <ListLink to="/map">
+            <Trans i18nKey="nav.siteMap">خارطة الموقع</Trans>
+          </ListLink>
         </ul>
         <div className={style.social}>
-          <img src={linkedIn} alt="online-coacth linkedIn" />
-          <img src={instagram} alt="online-coacth instagram" />
-          <img src={fb} alt="online-coacth facebook" />
-          <img src={twitter} alt="online-coacth twitter" />
+          <img src={linkedIn} alt="online-coach linkedIn" />
+          <img src={instagram} alt="online-coach instagram" />
+          <img src={fb} alt="online-coach facebook" />
+          <img src={twitter} alt="online-coach twitter" />
         </div>
       </div>
       <div className={style.cprights}>
-        <p>جميع حقوق الملكية محفوظة 2020</p>
+        <p>
+          <Trans i18nKey="cprights">جميع حقوق الملكية محفوظة 2020</Trans>
+        </p>
       </div>
     </Container>
   </footer>

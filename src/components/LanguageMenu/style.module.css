@@ -1,0 +1,79 @@
+.langBtn {
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  font: normal normal bold 16px/30px Cairo;
+  color: #6f6f6f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer {
+  width: 22px;
+  margin: 0 10px;
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.customDropDown {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 135%;
+  background: #fff;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 12rem;
+
+  transition: all 0.3s ease;
+}
+
+.customDropDown.ar {
+  right: 10%;
+  left: 0%;
+}
+
+.customDropDown.en {
+  left: 10%;
+  right: 0%;
+}
+
+.customDropDown.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.languagesList {
+  padding: 0 10px;
+}
+
+.languagesList a {
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6f6f6f;
+  transition: color 0.5s ease;
+}
+
+.languagesList li {
+  margin-bottom: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.languagesList li:hover {
+  background: #714efb12;
+}
+
+.languagesList a:hover {
+  color: var(--primary-color);
+}
