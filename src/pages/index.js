@@ -9,9 +9,11 @@ import Layout1 from '../components/Layouts/Layout1';
 const IndexPage = () => (
   <Layout1>
     <SEO title="Home" />
-    <HeroSection />
-    <Features />
-    <SubscribeForm />
+    <main>
+      <HeroSection />
+      <Features />
+      <SubscribeForm />
+    </main>
   </Layout1>
 );
 

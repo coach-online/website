@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-react-i18next';
 import PropTypes from 'prop-types';
 
 import style from './style.module.css';
@@ -7,7 +7,9 @@ import style from './style.module.css';
 export default function LinkItem({
   to, children, className, toggleMenu,
 }) {
-  const isActive = ({ location }) => (location.pathname + location.hash === to ? { className: style.active } : {});
+  const isActive = ({ location }) => (location.hash === to.replace('/', '')
+    ? { className: style.active }
+    : {});
   return (
     <li className={className}>
       <Link

@@ -46,8 +46,13 @@
   justify-content: space-between;
 }
 
-.heroContent .buttonText > span:after {
+.heroContent .buttonText > .btnSpan:after {
   content: " \2190";
+  font-size: 30px;
+}
+
+.heroContent .buttonText > .btnEnSpan:after {
+  content: '\2192';
   font-size: 30px;
 }
 

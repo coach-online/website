@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Home",
+    "ourFeatures": "Our Features",
+    "freeSubscription": "Join Freely",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "siteMap": "site  Map"
+  },
+  "hero": {
+    "content": "Oraganize your diet and workout plan in a time-saving and effective way!",
+    "explore": "Explore"
+  },
+  "features": {
+    "title": "Yalla Coach Features",
+    "feature1": "Save Time and Efforts",
+    "feature1Des": "يلا كوتش يساعدك على تنظيم جداول التغذية والتمرين للمشتركين الخاصين بك بسهولة تامة عن طريق اعادة استخدام الجداول التي قمت بانشائها سابقا",
+    "feature2": "Organize Clients' Plans",
+    "feature2Des": "يلا كوتش يتيح لك مجموعة كبيرة من جداول التمرين والتغذية المعتمدة ويمكنك ايضا التعديل عليها وتخصيصها للمشترك الجديد",
+    "feature3": "Create Diet Plan",
+    "feature3Des": "يلا كوتش يوفر لك قائمة كبيرة من الوجبات الغذائية التي يمكنك استخدامها في بناء جداول التغذية بالاضافة لتفاصيل والمكونات الغذائية لكل وجبة",
+    "feature4": "Create Workout Plan",
+    "feature4Des": "يلا كوتش يوفر لك مكتبة فيديو ضخمة من التمارين مع شرح طريقة اداء كل تمارين يمكنك استخدامها في بناء جداول المشتركين"
+  },
+  "subscribeForm": {
+    "joinUs": "Join Us",
+    "leaveEmail": "اترك لنا بريدك الالكتروني لنقوم بارسال لك نسخة من التطبيق قبل الجميع",
+    "subscribeBtn": "Subscribe",
+    "email": "Email"
+  },
+  "ar": "العربية",
+  "en": "English",
+  "cprights": "جميع حقوق الملكية محفوظة 2020"
+}

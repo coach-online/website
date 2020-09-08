@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.navList ul {
+.navList .ul {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 50px;
