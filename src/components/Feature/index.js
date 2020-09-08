@@ -25,8 +25,8 @@ Feature.defaultProps = {
 };
 Feature.propTypes = {
   src: PropTypes.objectOf(PropTypes.any).isRequired,
-  p: PropTypes.string.isRequired,
-  h3: PropTypes.string.isRequired,
+  p: PropTypes.objectOf(PropTypes.any).isRequired,
+  h3: PropTypes.objectOf(PropTypes.any).isRequired,
   alt: PropTypes.string.isRequired,
   order: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };

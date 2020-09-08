@@ -32,7 +32,7 @@ function LanguageMenu({ direction }) {
         >
           <ul className={`list-non-styled ${style.languagesList}`}>
             {languages.map((lng) => (
-              <li className={language === lng && style.active} key={lng}>
+              <li className={language === lng ? style.active : ''} key={lng}>
                 <Link to={originalPath} language={lng} onClick={toggleLangMenu}>
                   <div className={style.imgContainer}>
                     <img
