@@ -42,6 +42,7 @@
   border: none;
   padding: 20px;
   font: normal normal normal 16px/30px Cairo;
+  direction: ltr;
 }
 
 .subscribeBtn {

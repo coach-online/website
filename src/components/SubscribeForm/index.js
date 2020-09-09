@@ -13,17 +13,17 @@ const renderMsg = (status, msg) => {
     case 'sending':
       return 'Sending ...';
     case 'success':
-      return 'Thank you for subscribing!';
+      return 'شكرا لك! لقد تم اشتراكك بنجاح';
     case 'error': {
       if (msg.includes('already subscribed')) {
-        return 'Already subscribed';
+        return 'أنت مسجل مسبقا';
       } if (
         msg.includes('Too many subscribe attempts')
           || msg.includes('has too many recent')
       ) {
         return 'Too many subscribe attempts, try in about 5 minutes';
       }
-      return 'Something wrong, try again later';
+      return 'حدث خطأ ما، الرجاء المحاولة من جديد';
     }
 
     default:
@@ -44,42 +44,44 @@ const SubscribeForm = () => {
           <MailchimpSubscribe
             url={url2}
             render={({ subscribe, status, message }) => (
-              <>
-                <form
-                  className={style.subscribeForm}
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    subscribe({ EMAIL: email });
-                  }}
+              <form
+                className={style.subscribeForm}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  subscribe({ EMAIL: email });
+                }}
+              >
+                <label htmlFor="email">
+                  <input
+                    className={style.subscribeInput}
+                    placeholder="البريد الالكتروني"
+                    id="email"
+                    name="email"
+                    type="email"
+                    required="true"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                </label>
+                <button
+                  className={style.subscribeBtn}
+                  type="submit"
+                  disabled={status === 'sending'}
                 >
-                  <label htmlFor="email">
-                    <input
-                      className={style.subscribeInput}
-                      placeholder="البريد الالكتروني"
-                      id="email"
-                      name="email"
-                      type="email"
-                      required="true"
-                      value={email}
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                      }}
-                    />
-                  </label>
-                  <button
-                    className={style.subscribeBtn}
-                    type="submit"
-                    disabled={status === 'sending'}
-                  >
-                    تسجيل
-                  </button>
-                </form>
+                  تسجيل
+                </button>
                 {email && (
-                  <div style={{ color: 'green' }}>
-                    {renderMsg(status, message)}
-                  </div>
+                <P24>
+
+                  {renderMsg(status, message)}
+                </P24>
+                // <div style={{ color: 'green' }}>
+                //   {renderMsg(status, message)}
+                // </div>
                 )}
-              </>
+              </form>
             )}
           />
         </div>
