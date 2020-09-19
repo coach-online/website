@@ -20,33 +20,26 @@
   font-size: 50px;
 }
 
-.heroContent button {
-  width: 195px;
+.heroContent a {
+  text-decoration: none;
+  max-width: 195px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
   border: none;
   background: var(--primary-color) 0% 0% no-repeat padding-box;
   box-shadow: 0px 20px 40px #1421ff4d;
   border-radius: 8px;
   color: #fff;
-  text-align: right;
   padding: 0 30px;
   outline: none;
   cursor: pointer;
   margin-top: 60px;
-  margin-bottom: 170px;
 }
 
-.heroContent .buttonText {
-  color: #fff;
-}
-
-.heroContent .buttonText > span {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.heroContent .buttonText > span:after {
+.heroContent a:after {
   content: " \2190";
   font-size: 30px;
 }
@@ -58,7 +51,7 @@
     line-height: 70px;
   }
 
-  .heroContent button {
+  .heroContent a {
     margin-top: 50px;
     margin-bottom: 100px;
   }
@@ -82,7 +75,7 @@
     font-size: 27px;
     line-height: 70px;
   }
-  .heroContent button {
+  .heroContent a {
     margin-bottom: 70px;
   }
 }
@@ -110,9 +103,10 @@
     line-height: 70px;
   }
 
-  .heroContent button {
-    width: 250px;
-    margin-bottom: 60px;
-    margin-top: 25px;
+  .heroContent a {
+    max-width: none;
+    /* margin-bottom: 60px;
+    margin-top: 25px; */
+    margin: 25px 0 60px;
   }
 }
