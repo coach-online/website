@@ -23,14 +23,23 @@ export default () => (
           <ListLink to="/map">خارطة الموقع</ListLink>
         </ul>
         <div className={style.social}>
-          <img src={linkedIn} alt="online-coacth linkedIn" />
-          <img src={instagram} alt="online-coacth instagram" />
-          <img src={fb} alt="online-coacth facebook" />
-          <img src={twitter} alt="online-coacth twitter" />
+          <a href="https://www.instagram.com/yalla_coach" target="_blank">
+            <img src={linkedIn} alt="online-coacth linkedIn" />
+          </a>
+          <a href="https://www.facebook.com/%D9%8A%D9%84%D8%A7-%D9%83%D9%88%D8%AA%D8%B4-YallaCoach-111607137357548" target="_blank">
+            <img src={fb} alt="online-coacth facebook" />
+          </a>
+          <a href="https://www.instagram.com/yalla_coach" target="_blank">
+            <img src={instagram} alt="online-coacth instagram" />
+          </a>
+          {/* <a href="https://www.instagram.com/yalla_coach" target="_blank">
+            <img src={twitter} alt="online-coacth twitter" />
+          </a> */}
         </div>
       </div>
       <div className={style.cprights}>
         <p>جميع حقوق الملكية محفوظة 2020</p>
+        <a href="mailto:info@yalla.coach">info@yalla.coach</a>
       </div>
     </Container>
   </footer>
