@@ -1,4 +1,4 @@
-.background{
+.background {
   background-color: var(--light-gray);
 }
 
@@ -29,22 +29,19 @@
   text-decoration: none;
   max-width: 320px;
   height: 60px;
-  line-height: 60px;
-  font-size: var(--font-size-20);
-  letter-spacing: var(--character-spacing-0);
-  font-family: var(--global-font-family);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-weight: bold;
   border: none;
   background: var(--primary-color) 0% 0% no-repeat padding-box;
   box-shadow: 0px 20px 40px #1421ff4d;
   border-radius: 8px;
   color: #fff;
-  text-align: right;
   padding: 0 30px;
   outline: none;
   cursor: pointer;
   margin-top: 60px;
-  margin-bottom: 170px;
 }
 
 .featureContent a:after {
@@ -63,5 +60,10 @@
   .featureContent {
     text-align: center;
     margin-top: 50px;
+    align-items: center;
+  }
+
+  .featureContent a {
+    width: 100%;
   }
 }

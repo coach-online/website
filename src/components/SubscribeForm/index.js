@@ -17,9 +17,10 @@ const renderMsg = (status, msg) => {
     case 'error': {
       if (msg.includes('already subscribed')) {
         return 'أنت مسجل مسبقا';
-      } if (
+      }
+      if (
         msg.includes('Too many subscribe attempts')
-          || msg.includes('has too many recent')
+        || msg.includes('has too many recent')
       ) {
         return 'Too many subscribe attempts, try in about 5 minutes';
       }
@@ -89,34 +90,36 @@ const SubscribeForm = () => {
                     }}
                   />
                 </label>
-                <label htmlFor="participants">
-                  <input
-                    className={style.subscribeInput}
-                    placeholder="متوسط عدد المشتركين الشهري"
-                    id="participants"
-                    name="participants"
-                    type="number"
-                    required="true"
-                    value={participants}
-                    onChange={(e) => {
-                      setParticipants(e.target.value);
-                    }}
-                  />
-                </label>
-                <label htmlFor="workField">
-                  <input
-                    className={style.subscribeInput}
-                    placeholder="مجال العمل"
-                    id="workField"
-                    name="workField"
-                    type="text"
-                    required="true"
-                    value={workField}
-                    onChange={(e) => {
-                      setWorkField(e.target.value);
-                    }}
-                  />
-                </label>
+                <div className={style.inputRow}>
+                  <label htmlFor="participants">
+                    <input
+                      className={style.subscribeInput}
+                      placeholder="متوسط عدد المشتركين الشهري"
+                      id="participants"
+                      name="participants"
+                      type="number"
+                      required="true"
+                      value={participants}
+                      onChange={(e) => {
+                        setParticipants(e.target.value);
+                      }}
+                    />
+                  </label>
+                  <label htmlFor="workField">
+                    <input
+                      className={style.subscribeInput}
+                      placeholder="مجال العمل"
+                      id="workField"
+                      name="workField"
+                      type="text"
+                      required="true"
+                      value={workField}
+                      onChange={(e) => {
+                        setWorkField(e.target.value);
+                      }}
+                    />
+                  </label>
+                </div>
                 <label htmlFor="phoneNumber">
                   <input
                     className={style.subscribeInput}
@@ -140,12 +143,10 @@ const SubscribeForm = () => {
                   تسجيل
                 </button>
                 {email && (
-                <P24>
-                  {renderMsg(status, message)}
-                </P24>
-                // <div style={{ color: 'green' }}>
-                //   {renderMsg(status, message)}
-                // </div>
+                  <P24>{renderMsg(status, message)}</P24>
+                  // <div style={{ color: 'green' }}>
+                  //   {renderMsg(status, message)}
+                  // </div>
                 )}
               </form>
             )}
