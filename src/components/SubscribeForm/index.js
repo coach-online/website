@@ -110,7 +110,7 @@ const SubscribeForm = () => {
                   <label htmlFor="workField">
                     <input
                       className={style.subscribeInput}
-                      placeholder="مجال العمل"
+                      placeholder="مجال العمل (مختص تغذية, مدرب اونلاين, مدرب شخصي في الجيم,...)"
                       id="workField"
                       name="workField"
                       type="text"
