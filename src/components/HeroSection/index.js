@@ -1,9 +1,9 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Container from '../Container';
 import ImgContainer from '../ImgContainer';
-import { P20 } from '../Typography';
+// import { P20 } from '../Typography';
 
 import style from './style.module.css';
 
@@ -27,11 +27,9 @@ export default function HeroSection() {
             <h2 className={style.heading2}>
               إنشاء جداول التمارين والتغذية للمشتركين بطريقة فعالة وموفرة للوقت
             </h2>
-            <button type="button">
-              <P20 className={style.buttonText}>
-                <span>إكتشف</span>
-              </P20>
-            </button>
+            <Link to="/#features">
+              إكتشف
+            </Link>
           </div>
           <ImgContainer
             fluid={data.image.childImageSharp.fluid}
