@@ -23,7 +23,7 @@ export default () => (
           <ListLink to="/map">خارطة الموقع</ListLink>
         </ul>
         <div className={style.social}>
-          <a href="https://www.instagram.com/yalla_coach" target="_blank">
+          <a href="https://www.linkedin.com/company/yallacoach/" target="_blank">
             <img src={linkedIn} alt="online-coacth linkedIn" />
           </a>
           <a href="https://www.facebook.com/%D9%8A%D9%84%D8%A7-%D9%83%D9%88%D8%AA%D8%B4-YallaCoach-111607137357548" target="_blank">
