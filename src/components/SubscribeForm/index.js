@@ -44,7 +44,7 @@ const SubscribeForm = () => {
         <div className={style.bgLayer}>
           <Heading2 fontSize="56px">إنضم إلينا</Heading2>
           <P24>
-            اترك لنا معلوماتك لنقوم بارسال لك نسخة من التطبيق قبل الجميع
+            قم بانشاء حساب مدرب في الموقع
           </P24>
           <MailchimpSubscribe
             url={url2}
