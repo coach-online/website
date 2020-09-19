@@ -32,14 +32,18 @@ const renderMsg = (status, msg) => {
 };
 
 const SubscribeForm = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [participants, setParticipants] = useState();
+  const [workField, setWorkField] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   return (
     <section id="subscribe" className={style.subscribe}>
       <Container className={style.subscribeContainer}>
         <div className={style.bgLayer}>
           <Heading2 fontSize="56px">إنضم إلينا</Heading2>
           <P24>
-            اترك لنا بريدك الالكتروني لنقوم بارسال لك نسخة من التطبيق قبل الجميع
+            اترك لنا معلوماتك لنقوم بارسال لك نسخة من التطبيق قبل الجميع
           </P24>
           <MailchimpSubscribe
             url={url2}
@@ -48,9 +52,29 @@ const SubscribeForm = () => {
                 className={style.subscribeForm}
                 onSubmit={(e) => {
                   e.preventDefault();
-                  subscribe({ EMAIL: email });
+                  subscribe({
+                    EMAIL: email,
+                    FNAME: name,
+                    MMERGE17: participants,
+                    MMERGE18: workField,
+                    PHONE: phoneNumber,
+                  });
                 }}
               >
+                <label htmlFor="name">
+                  <input
+                    className={style.subscribeInput}
+                    placeholder="الاسم"
+                    id="name"
+                    name="name"
+                    type="text"
+                    required="true"
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
+                  />
+                </label>
                 <label htmlFor="email">
                   <input
                     className={style.subscribeInput}
@@ -65,6 +89,49 @@ const SubscribeForm = () => {
                     }}
                   />
                 </label>
+                <label htmlFor="participants">
+                  <input
+                    className={style.subscribeInput}
+                    placeholder="متوسط عدد المشتركين الشهري"
+                    id="participants"
+                    name="participants"
+                    type="number"
+                    required="true"
+                    value={participants}
+                    onChange={(e) => {
+                      setParticipants(e.target.value);
+                    }}
+                  />
+                </label>
+                <label htmlFor="workField">
+                  <input
+                    className={style.subscribeInput}
+                    placeholder="مجال العمل"
+                    id="workField"
+                    name="workField"
+                    type="text"
+                    required="true"
+                    value={workField}
+                    onChange={(e) => {
+                      setWorkField(e.target.value);
+                    }}
+                  />
+                </label>
+                <label htmlFor="phoneNumber">
+                  <input
+                    className={style.subscribeInput}
+                    placeholder="رقم الجوال"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    type="text"
+                    required="true"
+                    value={phoneNumber}
+                    onChange={(e) => {
+                      setPhoneNumber(e.target.value);
+                    }}
+                  />
+                </label>
+
                 <button
                   className={style.subscribeBtn}
                   type="submit"
@@ -74,7 +141,6 @@ const SubscribeForm = () => {
                 </button>
                 {email && (
                 <P24>
-
                   {renderMsg(status, message)}
                 </P24>
                 // <div style={{ color: 'green' }}>

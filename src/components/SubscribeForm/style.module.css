@@ -30,12 +30,15 @@
 }
 
 .subscribeForm {
+  margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 80px;
+  max-width: 800px;
+  text-align: justify;
 }
 
 .subscribeInput {
-  width: 397px;
+  width: 47%;
   height: 50px;
   background: #f6f6f6 0% 0% no-repeat padding-box;
   border-radius: 4px;
@@ -43,10 +46,11 @@
   padding: 20px;
   font: normal normal normal 16px/30px Cairo;
   direction: ltr;
+  margin: 5px 5px;
 }
 
 .subscribeBtn {
-  width: 166px;
+  width: 47%;
   height: 50px;
   background: var(--primary-color) 0% 0% no-repeat padding-box;
   background: #714efb 0% 0% no-repeat padding-box;
@@ -54,7 +58,8 @@
   color: #fff;
   border: none;
   font: normal normal normal 17px/32px Cairo;
-  margin-right: 18px;
+  margin: 5px 5px;
+  /* margin-right: 18px; */
   cursor: pointer;
 }
 

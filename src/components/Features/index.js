@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Container from '../Container';
 import Feature from '../Feature';
 import { Heading2 } from '../Typography';
 
@@ -32,35 +31,33 @@ export default function MainFeaturesSection() {
   return (
     <>
       <section id="features" className={style.features}>
-        <Container>
-          <Heading2 className="center">مزايا يلا كوتش</Heading2>
-          <Feature
-            src={getFeatureImgSrc('feature1')}
-            alt="feature 1"
-            p="يلا كوتش يساعدك على تنظيم جداول التغذية والتمرين للمشتركين الخاصين بك بسهولة تامة عن طريق اعادة استخدام الجداول التي قمت بانشائها سابقا"
-            h3="توفير الوقت والجهد"
-          />
-          <Feature
-            order={-1}
-            src={getFeatureImgSrc('feature2')}
-            alt="YallaCoach plans"
-            p=" يلا كوتش يتيح لك مجموعة كبيرة من جداول التمرين والتغذية المعتمدة ويمكنك ايضا التعديل عليها وتخصيصها للمشترك الجديد"
-            h3="تنظيم جداول المشتركين"
-          />
-          <Feature
-            src={getFeatureImgSrc('feature3')}
-            alt="YallaCoach nutrition plans"
-            p=" يلا كوتش يوفر لك قائمة كبيرة من الوجبات الغذائية التي يمكنك  استخدامها في بناء جداول التغذية بالاضافة لتفاصيل والمكونات الغذائية لكل وجبة"
-            h3="بناء جداول التغذية"
-          />
-          <Feature
-            order={-1}
-            src={getFeatureImgSrc('feature4')}
-            alt="YallaCoach workout plans"
-            p=" يلا كوتش يوفر لك مكتبة فيديو ضخمة من التمارين مع شرح طريقة اداء كل تمارين يمكنك استخدامها في بناء جداول المشتركين"
-            h3="بناء جداول التمرين"
-          />
-        </Container>
+        <Heading2 className="center">مزايا يلا كوتش</Heading2>
+        <Feature
+          src={getFeatureImgSrc('feature3')}
+          alt="YallaCoach nutrition plans"
+          p=" يلا كوتش يوفر لك قائمة كبيرة من الوجبات الغذائية التي يمكنك  استخدامها في بناء جداول التغذية بالاضافة لتفاصيل والمكونات الغذائية لكل وجبة"
+          h3="بناء جداول التغذية"
+        />
+        <Feature
+          order={-1}
+          src={getFeatureImgSrc('feature4')}
+          alt="YallaCoach workout plans"
+          p=" يلا كوتش يوفر لك مكتبة فيديو ضخمة من التمارين مع شرح طريقة اداء كل تمارين يمكنك استخدامها في بناء جداول المشتركين"
+          h3="بناء جداول التمرين"
+        />
+        <Feature
+          src={getFeatureImgSrc('feature5')}
+          alt="feature 1"
+          p="يلا كوتش يساعدك على ارشفة ومتابعة تقدم المشتركين بكل بساطة"
+          h3="متابعة تقدم المشتركين"
+        />
+        <Feature
+          order={-1}
+          src={getFeatureImgSrc('feature1')}
+          alt="YallaCoach plans"
+          p="يلا كوتش يتيح لك الفرصة للحصول على مشتركين جدد وزيادة دخلك"
+          h3="الحصول على مشتركين جدد"
+        />
       </section>
     </>
   );
