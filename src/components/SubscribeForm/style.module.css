@@ -63,6 +63,20 @@
   width: 48%;
 }
 
+.checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--white-color);
+}
+
+.checkbox input {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+
 .subscribeBtn {
   width: 100%;
   height: 50px;
@@ -96,5 +110,17 @@
 @media only screen and (max-width: 600px) {
   .subscribeForm {
     padding: 0 10px;
+  }
+
+  .inputRow label:nth-child(1){
+    width: 100%;
+  }
+  
+  .inputRow label:nth-child(2){
+    width: 100%;
+  }
+
+  .inputRow {
+    display: block;
   }
 }

@@ -13,7 +13,7 @@ const renderMsg = (status, msg) => {
     case 'sending':
       return 'Sending ...';
     case 'success':
-      return 'شكرا لك! لقد تم اشتراكك بنجاح';
+      return 'شكرا لقد تم تسجيلك بنجاح, سيتم التواصل معك قريبا من اجل التحقق من الطلب';
     case 'error': {
       if (msg.includes('already subscribed')) {
         return 'أنت مسجل مسبقا';
@@ -38,6 +38,7 @@ const SubscribeForm = () => {
   const [participants, setParticipants] = useState();
   const [workField, setWorkField] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [certified, setCertified] = useState(false);
   return (
     <section id="subscribe" className={style.subscribe}>
       <Container className={style.subscribeContainer}>
@@ -59,6 +60,7 @@ const SubscribeForm = () => {
                     MMERGE17: participants,
                     MMERGE18: workField,
                     PHONE: phoneNumber,
+                    MMERGE19: certified,
                   });
                 }}
               >
@@ -69,7 +71,7 @@ const SubscribeForm = () => {
                     id="name"
                     name="name"
                     type="text"
-                    required="true"
+                    required
                     value={name}
                     onChange={(e) => {
                       setName(e.target.value);
@@ -83,7 +85,7 @@ const SubscribeForm = () => {
                     id="email"
                     name="email"
                     type="email"
-                    required="true"
+                    required
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
@@ -98,7 +100,7 @@ const SubscribeForm = () => {
                       id="participants"
                       name="participants"
                       type="number"
-                      required="true"
+                      required
                       value={participants}
                       onChange={(e) => {
                         setParticipants(e.target.value);
@@ -112,7 +114,7 @@ const SubscribeForm = () => {
                       id="workField"
                       name="workField"
                       type="text"
-                      required="true"
+                      required
                       value={workField}
                       onChange={(e) => {
                         setWorkField(e.target.value);
@@ -127,12 +129,27 @@ const SubscribeForm = () => {
                     id="phoneNumber"
                     name="phoneNumber"
                     type="text"
-                    required="true"
+                    required
                     value={phoneNumber}
                     onChange={(e) => {
                       setPhoneNumber(e.target.value);
                     }}
                   />
+                </label>
+                <label htmlFor="certified" className={style.checkbox}>
+                  <input
+                    className={style.subscribeInput}
+                    id="certified"
+                    name="certified"
+                    type="checkbox"
+                    checked={certified}
+                    onChange={(e) => {
+                      setCertified(e.target.checked);
+                    }}
+                  />
+                  <span>
+                    انا املك شهادات معتمدة في مجال التدريب
+                  </span>
                 </label>
 
                 <button
